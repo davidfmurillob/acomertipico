@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/acomertipico/static/css/main.bc7887c0.css",
+    "main.js": "/acomertipico/static/js/main.b7960f3d.js",
+    "static/media/food-background.jpg": "/acomertipico/static/media/food-background.d750e1b4667d9335f5bd.jpg",
+    "static/media/food-background-mobile.jpg": "/acomertipico/static/media/food-background-mobile.38fdee5ed2b22aaf1f87.jpg",
+    "static/media/phone10.png": "/acomertipico/static/media/phone10.9d666d8a59df4441c84c.png",
+    "static/media/empanadas1.jpg": "/acomertipico/static/media/empanadas1.d244f4a704a21e11626c.jpg",
+    "index.html": "/acomertipico/index.html",
+    "static/media/tick.svg": "/acomertipico/static/media/tick.fbd0e0865125290069e7107f265ac13c.svg",
+    "static/media/remove.svg": "/acomertipico/static/media/remove.3270f2c93c8c138fa6cc69fbd18f985e.svg",
+    "static/media/add.svg": "/acomertipico/static/media/add.46ae0e09d1132337aa923311b95c4996.svg",
+    "static/media/subtract.svg": "/acomertipico/static/media/subtract.260546d7dd2eaed533a43b363180d557.svg",
+    "main.bc7887c0.css.map": "/acomertipico/static/css/main.bc7887c0.css.map",
+    "main.b7960f3d.js.map": "/acomertipico/static/js/main.b7960f3d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc7887c0.css",
+    "static/js/main.b7960f3d.js"
+  ]
+}
