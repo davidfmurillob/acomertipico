@@ -1,0 +1,30 @@
+@import './mixins.scss';
+
+.red-dot {
+    position: absolute;
+    right: -3px;
+    top: 0;
+    background-color: #ff613a;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+  
+    @include respond(phone) {
+      width: 1.2rem;
+      height: 1.2rem;
+      right: 0px;
+    }
+  
+    & span {
+      @include respond(phone) {
+        font-size: 1rem;
+      }
+    }
+  }
+  

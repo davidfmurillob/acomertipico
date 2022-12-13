@@ -1,0 +1,165 @@
+@import './mixins.scss';
+
+
+// :root {
+//   --color-bg-card: #e8e8e8;
+//   --color-grey: #959494;
+//   --color-text: #151515;
+//   --color-white: #fff;
+// }
+// .category {
+//   padding-left: 15vw;
+//   padding-right: 15vw;
+//   position: fixed;
+//   top: 10rem;
+//   width: 100%;
+//   background-color: var(--color-white);
+//   display: flex;
+//   height: 10rem;
+//   align-items: center;
+//   opacity: 0.95;
+//   cursor: pointer;
+
+//   @include respond(tab-land) {
+//     justify-content: center;
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//   }
+
+//   @include respond(phone) {
+//     top: 7rem;
+//     padding-left: 5px;
+//     padding-right: 5px;
+//     height: 6rem;
+//   }
+
+//   @include respond(phone-sm) {
+//     top: 5rem;
+//   }
+
+//   & h3 {
+//     padding: 1rem 3rem;
+//     font-size: 2.2rem;
+//     text-align: center;
+//     display: flex;
+//     align-items: center;
+
+//     @include respond(tab-port) {
+//       font-size: 1.8rem;
+//       height: 7rem;
+//     }
+
+//     @include respond(phone) {
+//       font-weight: 500;
+//       height: 5rem;
+//       padding: 1rem;
+//     }
+//     @include respond(phone-sm) {
+//       font-size: 1.4rem;
+//       font-weight: 400;
+//       padding: 0.8rem;
+//     }
+//   }
+
+//   &--active {
+//     background-color: var(--color-bg-card);
+//   }
+// }
+
+.products {
+  background-color: #f8fafc;
+  // margin-top: 6rem;
+  padding-bottom: 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__container {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    // padding-top: 3rem;
+
+    @include respond(big-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include respond(tab-land) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      gap: 2rem;
+    }
+
+    @include respond(tab-port) {
+      padding-left: 10rem;
+      padding-right: 10rem;
+      grid-template-columns: 2fr;
+
+      // grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      gap: 1rem;
+      // padding-top: 8rem;
+    }
+    @include respond(phone-sm) {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+}
+
+.product-card {
+  cursor: pointer;
+
+  &__img-box {
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--color-bg-card);
+
+    @include respond(tab-port) {
+      height: 22rem;
+    }
+
+    @include respond(phone) {
+      height: 20rem;
+      border: 2px solid var(--color-bg-card);
+    }
+    @include respond(phone-sm) {
+      height: 25rem;
+    }
+  }
+
+  &__img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
+
+  &__name {
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+
+
+    @include respond(phone) {
+      padding: 1rem 1rem;
+    }
+  }
+  &__price {
+
+    font-size: 1.5rem;
+    padding: 0 .8rem;
+    @include respond(phone) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

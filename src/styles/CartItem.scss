@@ -1,0 +1,123 @@
+@import './mixins.scss';
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.item {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @include respond(phone) {
+    gap: 1.2rem;
+  }
+
+  &__info {
+    display: flex;
+    gap: 1.5rem;
+
+    & p {
+      margin-bottom: 1rem;
+
+      @include respond(phone-sm) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--img-box {
+      min-width: 10em;
+      max-width: 10rem;
+      min-height: 12rem;
+      max-height: 12rem;
+      border: 2px solid var(--color-bg-card);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      @include respond(phone) {
+        min-width: 8em;
+        max-width: 8rem;
+        min-height: 10rem;
+        max-height: 10rem;
+        border: 2px solid var(--color-bg-card);
+      }
+
+      & img {
+        width: 60%;
+      }
+    }
+
+    &--quantity {
+      display: flex;
+      align-items: center;
+
+      @include respond(phone) {
+        gap: 2px;
+      }
+
+      & img {
+        width: 3.2rem;
+        height: 3.2rem;
+        padding: 0.5rem;
+        cursor: pointer;
+
+        @include respond(phone) {
+          width: 28px;
+          height: 28px;
+          padding: 5px;
+        }
+
+        &:hover {
+          background-color: var(--color-bg-card);
+        }
+      }
+
+      & input {
+        width: 4rem;
+        height: 3rem;
+        outline: none;
+        border: 2px solid var(--color-bg-card);
+        font-size: 1.6rem;
+        text-align: center;
+
+        @include respond(phone) {
+          width: 30px;
+          border: 1px solid var(--color-bg-card);
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+
+    & img {
+      width: 4rem;
+      padding: 1rem;
+      cursor: pointer;
+
+      @include respond(phone) {
+        width: 35px;
+        height: 35px;
+      }
+
+      &:hover {
+        background-color: var(--color-bg-card);
+      }
+    }
+  }
+}

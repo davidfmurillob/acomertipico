@@ -1,0 +1,137 @@
+@import './mixins.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  height: 10rem;
+  width: 100vw;
+  border-bottom: 2px solid var(--color-bg-card);
+  z-index: 10;
+
+  @include respond(tab-land) {
+    padding: 0 2rem;
+  }
+  @include respond(phone) {
+    height: 7rem;
+  }
+
+  @include respond(phone-sm) {
+    padding: 0 1rem;
+    height: 5rem;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+
+    & img {
+      width: 7rem;
+      height: 7rem;
+
+      @include respond(phone) {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      @include respond(phone-sm) {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
+
+    & h1 {
+      letter-spacing: 1.1rem;
+
+      @include respond(tab-land) {
+        display: none;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+
+    @include respond(phone) {
+      gap: 2rem;
+    }
+
+    &--nav {
+      display: flex;
+      gap: 5rem;
+      color: var(--color-white);
+
+      @include respond(phone) {
+        gap: 3rem;
+      }
+
+      @include respond(phone-sm) {
+        gap: 2rem;
+      }
+
+      & h2 {
+        margin: 0;
+
+        @include respond(phone) {
+          font-size: 1.8rem;
+        }
+
+        @include respond(phone-sm) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.cart-group {
+  position: relative;
+}
+
+.cart-icon {
+  cursor: pointer;
+
+  @include respond(phone) {
+    width: 3rem;
+  }
+
+  @include respond(phone-sm) {
+    width: 2.2rem;
+  }
+}
+
+.red-dot {
+  position: absolute;
+  right: -3px;
+  top: 0;
+  background-color: #ff613a;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  @include respond(phone) {
+    width: 2.3rem;
+    height: 2.3rem;
+    right: 0px;
+  }
+
+  & span {
+    @include respond(phone) {
+      font-size: 1.2rem;
+    }
+  }
+}

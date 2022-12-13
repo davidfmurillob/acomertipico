@@ -1,0 +1,76 @@
+@import './mixins.scss';
+
+.contact {
+  height: calc(100vh - 18rem);
+  margin-top: 10rem;
+  padding: 5vh 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  @include respond(tab-port) {
+    padding: 5vh 20vw;
+  }
+
+  @include respond(phone) {
+    margin-top: 7rem;
+    height: calc(100vh - 14rem);
+    padding: 5vh 15vw;
+  }
+
+  @include respond(phone-sm) {
+    margin-top: 5rem;
+    height: calc(100vh - 10rem);
+  }
+
+  & h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
+  }
+
+  & h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+  & p {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    max-width: 90rem;
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+
+    & img {
+      width: 50px;
+
+      @include respond(tab-land) {
+        width: 30px;
+      }
+    }
+  }
+
+  &__img {
+    width: 55rem;
+    max-width: 100%;
+  }
+}

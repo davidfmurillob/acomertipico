@@ -1,0 +1,91 @@
+@import './mixins.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-bg-card: #e8e8e8;
+  --color-grey: #959494;
+  --color-text: #151515;
+  --color-white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 70%;
+  }
+}
+
+body {
+  font-family: 'poppin', sans-serif;
+  color: var(--color-text);
+  position: relative;
+  word-wrap: break-word;
+  overflow: overlay;
+}
+
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.7rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+  }
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.btn {
+  color: var(--color-white);
+  border: 3px solid var(--color-text);
+  background-color: var(--color-text);
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-white);
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
