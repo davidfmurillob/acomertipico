@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/navBar/Navbar";
@@ -102,7 +102,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<Landing />} />
@@ -182,7 +182,7 @@ function App() {
         </Route>
       </Routes>
       <Cart products={products} />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
