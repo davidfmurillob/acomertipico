@@ -69,7 +69,8 @@ export default function DetalleProducto() {
 
         //Cambiar por la api de acomertipico
         // const res = await fetch(`https://fakestoreapi.com/products/${id}`);
-        const res = await fetch(`http://localhost:8000/api/products/${id}`);  
+        // const res = await fetch(`http://localhost:8000/api/products/${id}`);  
+        const res = await fetch(`https://acomertipico-production-c2ff.up.railway.app/api/products/${id}`);  
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
         const response = data.data;

@@ -45,7 +45,8 @@ import AdminCocinaAsistencia from "./views/admin/adminCocina/AdminCocinaAsistenc
 //Revisar los cambios en estas líneas, son parámetros definidos para las peticiones
 // axios.defaults.baseURL = "http://127.0.0.1:8000";
 // axios.defaults.baseURL = "http://acomertipico.herokuapp.com";
-axios.defaults.baseURL = "http://localhost:8000";
+// axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://acomertipico-production-c2ff.up.railway.app";
 
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.post["Accept"] = "application/json";
@@ -72,7 +73,8 @@ function App() {
       setIsLoading(true);
       try {
         //Cambiar la api por la de acomertipico
-        const res = await fetch("http://localhost:8000/api/products");
+        // const res = await fetch("http://localhost:8000/api/products");
+        const res = await fetch("https://acomertipico-production-c2ff.up.railway.app/api/products");
         // const res = await fetch('https://fakestoreapi.com/products');
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();

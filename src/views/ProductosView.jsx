@@ -29,7 +29,8 @@ const ProductosView = () => {
   };
 
   const getNumeroRestaurante = (id) => {
-    fetch(`http://localhost:8000/api/establishments/${id}`)
+    // fetch(`http://localhost:8000/api/establishments/${id}`)
+    fetch(`https://acomertipico-production-c2ff.up.railway.app/api/establishments/${id}`)
     .then(response => response.json())
     .then(data => localStorage.setItem("telefono_establecimiento", data.establishment.telefono_establecimiento))
   }
