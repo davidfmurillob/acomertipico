@@ -150,7 +150,7 @@ const AdminRestaurantesCrear = () => {
                         htmlFor="location"
                         className="block text-sm font-medium text-gray-700"
                       >
-                        Ubicación del establecimiento {"(coordenadas)"}
+                        Barrio
                       </label>
                       <input
                         type="text"
