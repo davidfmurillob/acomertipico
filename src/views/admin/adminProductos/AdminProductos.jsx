@@ -53,7 +53,7 @@ const AdminProductos = () => {
   
   return (
     <div className="overflow-auto">
-      <div className="mx-auto w-2/5 text-center text-slate-50 rounded rounded-b-none text-3xl mt-5 py-2 bg-gray-600">
+      <div className="mx-auto w-4/6 sm:w-2/5 text-center text-slate-50 rounded rounded-b-none text-3xl mt-5 py-2 bg-gray-600">
         Listado de productos
       </div>
       <div className="md:grid md:grid-cols-6 md:gap-6">

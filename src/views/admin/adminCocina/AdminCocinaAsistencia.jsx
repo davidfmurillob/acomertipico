@@ -6,24 +6,29 @@ import { useState } from 'react'
 const AdminCocinaAsistencia = () => {
 
     const [asistencia, setAsistencia] = useState([])    
+    // const [user, setUser] = useState([])    
 
     useEffect(() => {
-      getAsistencia()
+      getEvents()
     
     }, [])
 
 
-    const getAsistencia = () => {
-        axios.get('api/establishments').then(response=> {
-            console.log(response.data.establishment)
-            setAsistencia(response.data.establishment)     
+    const getEvents = () => {
+        axios.get('api/event-users').then(response=> {
+            // console.log(response.data.data)
+            console.log(response.data.info)
+            setAsistencia(response.data.info)
+            // setUser(response.data.info)
+
+                
         })
     }   
 
 
   return (
     <div className="overflow-auto">
-      <div className="mx-auto w-2/5 text-center text-slate-50 rounded rounded-b-none text-3xl mt-5 py-2 bg-gray-600">
+      <div className="mx-auto w-4/6 sm:w-2/5 text-center text-slate-50 rounded rounded-b-none text-3xl mt-5 py-2 bg-gray-600">
         Lista de asistencia cocina con nosotros
       </div>
       <div className="md:grid md:grid-cols-6 md:gap-6">
@@ -63,31 +68,31 @@ const AdminCocinaAsistencia = () => {
                   <span className="inline-block w-1/3 md:hidden font-bold">
                     Nombre del usuario
                   </span>
-                  {e.nombre_establecimiento}
+                  {e.name}
                 </td>
                 <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                   <span className="inline-block w-1/3 md:hidden font-bold">
                     Email usuario
                   </span>
-                  email@gmail.com
+                  {e.email}
                 </td>
                 <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                   <span className="inline-block w-1/3 md:hidden font-bold">
                     Nombre del evento
                   </span>
-                  NOMBRE DEL EVENTO
+                  {e.nombre}
                 </td>
                 <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                   <span className="inline-block w-1/3 md:hidden font-bold">
                     Fecha
                   </span>
-                  FECHA
+                  {e.fecha}
                 </td>
                 <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                   <span className="inline-block w-1/3 md:hidden font-bold">
                     Hora
                   </span>
-                  HORA
+                  {e.hora}
                 </td>
                 
               </tr>
