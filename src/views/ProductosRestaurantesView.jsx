@@ -38,7 +38,7 @@ const fetchData = async () => {
     try {
       //Cambiar la api por la de acomertipico
       // const res = await fetch(`http://localhost:8000/api/establishments/${idRestaurante}`);
-      const res = await fetch(`https://acomertipico-production-c2ff.up.railway.app/api/establishments/${idRestaurante}`);
+      const res = await fetch(`https://apiacomertipico-production-5523.up.railway.app/api/establishments/${idRestaurante}`);
       // const res = await fetch('https://fakestoreapi.com/products');
       console.log(res)
       if (!res.ok) throw new Error(res.statusText);
